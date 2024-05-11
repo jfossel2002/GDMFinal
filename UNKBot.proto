@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package UNKBOT;
+
+
+service UNKService{
+    rpc Prompt_Bot(UNKRequest) returns (UNKResponse); //returns the result of the UNK request
+    rpc Train_Bot(TrainRequest) returns (TrainResponse); 
+}
+
+message UNKRequest{
+    string prompt = 1;
+}
+
+message UNKResponse{
+    string response = 1;
+}
+
+message TrainRequest{
+    string prompt = 1;
+}
+
+message TrainResponse{
+    string response = 1;
+}
